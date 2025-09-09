@@ -2,15 +2,16 @@ package dev.dead.jmsmessaging.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 @Configuration
 public class JmsConfig {
-    public static final  String MY_QUEUE = "myQueue";
-    public static final  String MY_TOPIC = "myTopic";
+    public static final String MY_QUEUE = "myQueue";
+    public static final String MY_callback_QUEUE = "callbackQueue";
+    public static final String MY_TOPIC = "myTopic";
+
     @Bean
     public MessageConverter messageConverter() {
 
